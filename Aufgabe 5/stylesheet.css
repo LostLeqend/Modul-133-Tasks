@@ -1,0 +1,9 @@
+body {
+    vertical-align: middle;
+    align-content: center;
+    align-self: center;
+  }
+
+  input {
+      margin: 0px 10px 5px 0px;
+  }
