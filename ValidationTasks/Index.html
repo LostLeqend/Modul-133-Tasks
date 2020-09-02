@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>Test</p>
+
+    <form title="Testing">
+        <input type="search">
+        <br>
+        <input type="tel">
+        <br>
+        <input name="numberfield" type="number" min="3" max="19" value="7" step="2">
+        <br>
+        <input name="emailfield" type="email" multiple>
+        <br>
+        <input type="url">
+        <br>
+
+        <input id="rangefield" type="range" min="0" max="100" step="1" value="20">
+        <span id="val"></span>
+        <script>
+            var rangefield = document.getElementById("rangefield");
+            var showValue = function () {
+                document.getElementById("val").innerText = rangefield.value;
+            }
+            showValue();
+            rangefield.onchange = showValue;
+        </script>
+
+        <br>
+        <input type="color">
+        <br>
+
+        <p>
+            <code>date</code> - Datum<br>
+            <input name="datefield" type="date" min="2016-01-01" max="2018-12-31" />
+        </p>
+        <p>
+            <code>time</code> - Zeit<br>
+            <input name="timefield" type="time" />
+        </p>
+        <p>
+            <code>datetime</code> - Datum + Zeit<br>
+            <input name="datetimefield" type="datetime-local" />
+        </p>
+        <p>
+            <code>month</code> - Monat<br>
+            <input name="monthfield" type="month" />
+        </p>
+        <p>
+            <code>week</code> - Woche<br>
+            <input name="weekfield" type="week" min="2016-W49" max="2016-W52" value="2016-W49" step="2">
+        </p>
+
+        <p>
+            <code>pattern matching</code> - Pattern Matching<br>
+            <input name="zipCode" type="text" pattern="\d{4}">
+        </p>
+
+        <input type="text" pattern="[a-zA-Z0-9]{6}" name="formName" />
+
+        <input type="text" pattern="07[4-9] \d{3} ( \d{2}){2}">
+
+        <br><br><input type="submit" value="OK" />
+    </form>
+</body>
+
+</html>
