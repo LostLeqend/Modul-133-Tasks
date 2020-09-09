@@ -15,15 +15,3 @@ function fibonacciRec(prev, current, size, iteration) {
 
     
 }
-
-function fibonacci (n) {
-    previousNumber = 0;
-    currentNumber = 1;
-    for (let i = 0; i < n; i++) {   
-    placeholder = 0;
-    console.log(previousNumber + currentNumber);
-    placeholder = currentNumber;
-    currentNumber = previousNumber + currentNumber;
-    previousNumber = placeholder;
-    }
-}
