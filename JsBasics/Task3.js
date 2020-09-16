@@ -1,17 +1,15 @@
-fibonacciRec(0, 1, 5, 0);
+function fibonacci(n) {
+    var result = [];
 
-function fibonacciRec(prev, current, size, iteration) {
-    if (iteration !== size) {
-        let previousNumber = prev;
-        let currentNumber = current;
-        iteration++;
-        placeholder = 0;
-        console.log(previousNumber + currentNumber);
-        placeholder = currentNumber;
-        currentNumber = previousNumber + currentNumber;
-        previousNumber = placeholder;
-        fibonacciRec(previousNumber, currentNumber, size, iteration);
+    for (var i = 0; i < n; i++) {
+        if (i <= 1) {
+            result.push(i);
+        } else {
+            result.push(result[i - 1] + result[i - 2]);
+        }
     }
 
-    
+    return result;
 }
+
+console.log(fibonacci(20));

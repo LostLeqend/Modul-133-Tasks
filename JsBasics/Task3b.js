@@ -1,0 +1,3 @@
+var wordcount = function(text){
+
+}
