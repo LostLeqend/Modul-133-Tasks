@@ -1,3 +1,5 @@
+console.log("Task 3");
+
 function fibonacci(n) {
     var result = [];
 

@@ -1,3 +1,5 @@
+console.log("Task 1b");
+
 function varTest() {
     var x = 31;
     if (true) {

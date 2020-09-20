@@ -1,3 +1,5 @@
+console.log("Task 2b");
+
 class Person {
     constructor(firstname, lastname) {
         this._firstname = firstname;
