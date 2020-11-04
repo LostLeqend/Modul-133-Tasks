@@ -18,3 +18,5 @@ app.use(router.routes());
 app.listen({
     port: 8000
 });
+
+console.log("http://localhost:8000/");
