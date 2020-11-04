@@ -6,9 +6,14 @@ const s = serve({
     port: 8000
 });
 console.log("http://localhost:8000/");
-const indexFile = await Deno.open("Index.html")
 
-for await(const req of s) 
-{
-    req.respond({ body: indexFile }); 
-} 
+for await (const req of s) {
+    const textPromise = Deno.readTextFile("Index.html");
+    textPromise
+        .then(text => req.respond({
+            body: text
+        }))
+        .catch(exception => req.respond({
+            status: 404
+        }));
+}
